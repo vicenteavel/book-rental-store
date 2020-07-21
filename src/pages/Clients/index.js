@@ -5,7 +5,7 @@ import Navbar from '../../components/Navbar';
 
 import './styles.css';
 
-const clients = [
+export const clients = [
    { id: 1, name: "Vicente Avelino", email: "vicente@email.com.br" },
    { id: 2, name: "José Avelino", email: "jose@email.com.br" },
    { id: 3, name: "Josinalva Avelino", email: "josinalva@email.com.br" },

@@ -5,7 +5,7 @@ import Navbar from '../../components/Navbar';
 
 import './styles.css';
 
-const books = [
+export const books = [
    { id: 1, id_client: 1, title: "Moby-Dick", author: "Herman Melville" },
    { id: 2, id_client: null, title: "A Tale of Two Cities", author: "Charles Dickens" },
    { id: 3, id_client: null, title: "Pride and Prejudice", author: "Jane Austen" },

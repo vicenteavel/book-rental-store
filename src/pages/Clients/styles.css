@@ -35,12 +35,10 @@ ul.clients li {
 
    display: flex;
    flex-direction: column;
-   align-items: center;
    justify-content: space-evenly;
 }
 
 ul.clients .actions {
-   /* background-color: green; */
    width: 150px;
    display: flex;
    justify-content: space-evenly;

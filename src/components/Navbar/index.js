@@ -26,6 +26,14 @@ export default function Navbar() {
                <li>
                   <Link to="/books">Books</Link>
                </li>
+
+               <li>
+                  <Link to="/rents">Rents</Link>
+               </li>
+
+               <li>
+                  <Link to="/reservations">Reservations</Link>
+               </li>
             </ul>
          </nav>
       </div>
