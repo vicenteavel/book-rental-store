@@ -1,0 +1,23 @@
+.show-book-container {
+   width: 100%;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+}
+
+.show-book-container .fields{
+   margin-top: 30px;
+   display: flex;
+   flex-direction: column;
+}
+
+.show-book-container .field {
+   display: flex;
+   justify-content: stretch;
+   align-items: center;
+   margin-bottom: 20px;   
+}
+
+.show-book-container .field strong {
+   width: 70px;
+}
