@@ -1,0 +1,23 @@
+.show-client-container {
+   width: 100%;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+}
+
+.show-client-container .fields{
+   margin-top: 30px;
+   display: flex;
+   flex-direction: column;
+}
+
+.show-client-container .field {
+   display: flex;
+   justify-content: stretch;
+   align-items: center;
+   margin-bottom: 20px;   
+}
+
+.show-client-container .field strong {
+   width: 70px;
+}

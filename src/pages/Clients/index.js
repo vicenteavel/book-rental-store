@@ -1,27 +1,43 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import { FiPlusCircle, FiEye, FiEdit, FiTrash2} from 'react-icons/fi';
+import { useHistory } from 'react-router-dom';
+
+import api from '../../services/api';
 
 import Navbar from '../../components/Navbar';
 
 import './styles.css';
 
-export const clients = [
-   { id: 1, name: "Vicente Avelino", email: "vicente@email.com.br" },
-   { id: 2, name: "José Avelino", email: "jose@email.com.br" },
-   { id: 3, name: "Josinalva Avelino", email: "josinalva@email.com.br" },
-   { id: 4, name: "Vinicius Avelino", email: "vinicius@email.com.br" },
-   { id: 5, name: "Vitor Avelino", email: "vitor@email.com.br" },
-   { id: 6, name: "Fernanda Patrícia", email: "fernanda@email.com.br" },
-];
 
 export default function Clients() {
+   const [clients, setClients] = useState([]);
+   const history = useHistory();
+
+   useEffect( () => {
+      api.get('/clients').then( response => {
+         setClients(response.data);
+      });
+   }, [clients]);
+
+   async function handleDelete(id) {
+      if(window.confirm("Are you sure you want to delete?")) {
+         await api.delete(`/client/${id}`);
+         setClients([]); // to call the useEffect again
+      }
+   }
+
    return (
       <>
          <Navbar />
          <div className="client-container">
             <header>
                <h2>Clients</h2>
-               <FiPlusCircle size={32} color="green" className="button" />
+               <FiPlusCircle 
+                  size={32}
+                  color="green"
+                  className="button"
+                  onClick={ () => history.push('/client/create') }
+               />
             </header>
 
             <ul className="clients">
@@ -31,9 +47,23 @@ export default function Clients() {
                      <p>{client.name}</p>
 
                      <div className="actions">
-                        <FiEye size={20} className="button" />
-                        <FiEdit size={20} className="button"/>
-                        <FiTrash2 size={20} color="red" className="button" />
+                        <FiEye
+                           size={20}
+                           className="button"
+                           onClick={() => history.push(`client/${client.id}`)}
+                        />
+                        <FiEdit 
+                           size={20} 
+                           className="button"
+                           onClick={ () => history.push(`/client/edit/${client.id}`) }
+                        />
+
+                        <FiTrash2 
+                           size={20} 
+                           color="red" 
+                           className="button"
+                           onClick={ () => handleDelete(client.id)}
+                        />
                      </div>
                   </li>
                ))}
