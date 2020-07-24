@@ -1,0 +1,36 @@
+.dashboard-container {
+   width: 100%;
+   display: flex;
+   flex-direction: column;
+
+   align-items: center;
+   justify-content: center;
+}
+
+.weekly-container {
+   margin-top: 30px;
+   display: flex;
+   align-items: center;
+   flex-direction: column;
+}
+
+.weekly-container ul {
+   list-style: none;
+   padding: 25px 0;
+
+   display: grid;
+   grid-template-columns: 1fr 1fr 1fr 1fr;
+   gap: 75px;
+
+   text-align: center;
+}
+
+
+.weekly-container ul li {
+   height: 150px;
+   width: 150px;
+
+   display: flex;
+   flex-direction: column;
+   justify-content: space-evenly;
+}

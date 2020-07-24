@@ -51,7 +51,7 @@ export default function Books() {
                {books.map(book => (
                   <li key={book.id} >
                      <p> <b>Title: </b> {book.title}</p> 
-                     <p> <b>Author: </b> {book.author}</p> 
+                     <p> <b>Author: </b> {book.author}</p>
 
                      <div className="actions">
                         <FiEye 
