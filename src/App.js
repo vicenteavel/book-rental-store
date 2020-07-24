@@ -14,7 +14,10 @@ import CreateBook from './pages/Books/Create';
 import EditBook from './pages/Books/Edit';
 
 import Rents from './pages/Rents';
+import CreateRent from './pages/Rents/Create';
+
 import Reservations from './pages/Reservations';
+import CreateReservation from './pages/Reservations/Create';
 
 import './App.css'
 
@@ -26,18 +29,22 @@ function App() {
 
           <Route path="/clients" exact component={Clients} />
           <Route path="/client/:id" exact component={ShowClient} />
-          <Route path="/client/create" exact component={CreateClient} />
+          <Route path="/clients/create" exatc component={CreateClient} />
           <Route path="/client/edit/:id" exact component={EditClient} />
 
 
           <Route path="/books" exact component={Books} />
           <Route path="/book/:id" exact component={ShowBook} />
-          <Route path="/book/create" exact component={CreateBook} />
+          <Route path="/books/create" exact component={CreateBook} />
           <Route path="/book/edit/:id" exact component={EditBook} />
 
 
           <Route path="/rents" exact component={Rents} />
+          <Route path="/rent/create" exact component={CreateRent} />
+
           <Route path="/reservations" exact component={Reservations} />
+          <Route path="/reservation/create" exact component={CreateReservation} />
+
       </Switch>
     </BrowserRouter>
   );

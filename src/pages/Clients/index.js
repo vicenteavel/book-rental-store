@@ -36,7 +36,7 @@ export default function Clients() {
                   size={32}
                   color="green"
                   className="button"
-                  onClick={ () => history.push('/client/create') }
+                  onClick={ () => history.push('/clients/create') }
                />
             </header>
 

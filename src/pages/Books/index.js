@@ -43,7 +43,7 @@ export default function Books() {
                   size={32}
                   color="green"
                   className="button"
-                  onClick={() => history.push('/book/create')}
+                  onClick={() => history.push('/books/create')}
                />
             </header>
 
